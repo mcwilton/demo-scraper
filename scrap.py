@@ -6,6 +6,7 @@ BASE_URL = "https://www.zse.co.zw/price-sheet/"
 
 
 def fetch_data_from_url(url):
+    # functio to scrape data from the base url.
     try:
         response = pd.read_html(url, skiprows=1)
         dataframe = response[0][3:]
@@ -35,6 +36,7 @@ def current_date():
 
 
 def check_or_create_directory(dataframe, current_date):
+    # save to csv or excel
     try:
         os.makedirs("daily-price-sheets/csv", exist_ok=True)
         os.makedirs("daily-price-sheets/excel", exist_ok=True)
