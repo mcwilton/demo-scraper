@@ -1,2 +1,2 @@
 # demo-scraper
-I did this script to convince a client for a scrping project.
+I did this script to convince a client for a scraping project.
