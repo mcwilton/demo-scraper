@@ -20,9 +20,11 @@ def fetch_data_from_url(url):
         ]
         # print(dataframe)
 
+        # create a copy of the dataframe
         df_trades = dataframe[["Name", "Opening_Price", "Closing_Price", "Volume_Traded"]].copy()
         # print(df_trades)
 
+        # clean up the dataframe
         df_trades.dropna(inplace=True)
         return df_trades.set_index("Name")
     except Exception as e:
